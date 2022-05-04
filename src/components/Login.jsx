@@ -22,29 +22,20 @@ const Login = () => {
     setLoading(false)
   };
 
+  console.log(user);
+
   return (
     <div className="container">
       <span className="user">{user.name}</span>
       <form>
-        <input
-          type="text"
-          placeholder="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+        <input type="text" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)}
         />
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+        <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}
         />
         <button disabled={!username || !password} onClick={handleClick}>
           {loading ? "please wait" : "Login"}
         </button>
-        <span
-          data-testid="error"
-          style={{ visibility: error ? "visible" : "hidden" }}
-        >
+        <span data-testid="error" style={{ visibility: error ? "visible" : "hidden" }}>
           Something went wrong!
         </span>
       </form>
