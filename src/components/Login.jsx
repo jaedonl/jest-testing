@@ -22,8 +22,6 @@ const Login = () => {
     setLoading(false)
   };
 
-  console.log(user);
-
   return (
     <div className="container">
       <span className="user">{user.name}</span>
